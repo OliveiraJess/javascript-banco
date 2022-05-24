@@ -16,17 +16,28 @@ cliente2.rg = 6888887;
 
 const contaCorrenteCliente1 = new ContaCorrente();
 contaCorrenteCliente1.agencia = 1001;
+contaCorrenteCliente1.cliente = cliente1
+
+contaCorrenteCliente1.depositar(500)
+
+
+
+
 
 const contaCorrenteCliente2 = new ContaCorrente();
 contaCorrenteCliente2.agencia = 1001;
+contaCorrenteCliente2.cliente = cliente2
 
 
-contaCorrenteCliente1.depositar(100);
-contaCorrenteCliente1.depositar(150);
-contaCorrenteCliente1.depositar(100);
+// contaCorrenteCliente1.depositar(100);
+// contaCorrenteCliente1.depositar(150);
+// contaCorrenteCliente1.depositar(100);
+
+// const valorSacado = contaCorrenteCliente1.sacar(100);
 
 
-const valorSacado = contaCorrenteCliente1.sacar(100);
+contaCorrenteCliente1.transferir(200, contaCorrenteCliente2)
 
-console.log(valorSacado);
+// console.log(valorSacado);
 console.log(contaCorrenteCliente1);
+console.log(contaCorrenteCliente2);
