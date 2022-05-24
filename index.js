@@ -1,50 +1,32 @@
-class cliente {
-    nome;
-    cpf;
-    rg;
-};
+import{ Cliente }  from "./Cliente.js"
+import { ContaCorrente } from "./ContaCorrente.js";
 
 
-class contaCorrente {
-    agencia;
-    // #saldo = 0 ainda não esta aprovado esse método para tornar privado #
-    _saldo = 0
-
-    sacar(valor) {
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-        }
-    }
-    depositar (valor) {
-       if (valor > 0) {
-           this._saldo += valor
-       }
-    }
-};
-
-
-const cliente1 = new cliente();
+const cliente1 = new Cliente();
 cliente1.nome = "Maria";
 cliente1.cpf = 99988877766;
 cliente1.rg = 6888888;
 
 
-const cliente2 = new cliente();
+const cliente2 = new Cliente();
 cliente2.nome = "João";
 cliente2.cpf = 99988877755;
 cliente2.rg = 6888887;
 
 
-const contaCorrenteCliente1 = new contaCorrente();
+const contaCorrenteCliente1 = new ContaCorrente();
 contaCorrenteCliente1.agencia = 1001;
 
-const contaCorrenteCliente2 = new contaCorrente();
+const contaCorrenteCliente2 = new ContaCorrente();
 contaCorrenteCliente2.agencia = 1001;
 
 
-contaCorrenteCliente1.depositar(100)
-contaCorrenteCliente1.depositar(150)
-contaCorrenteCliente1.depositar(100)
-contaCorrenteCliente1.sacar(50)
+contaCorrenteCliente1.depositar(100);
+contaCorrenteCliente1.depositar(150);
+contaCorrenteCliente1.depositar(100);
 
+
+const valorSacado = contaCorrenteCliente1.sacar(100);
+
+console.log(valorSacado);
 console.log(contaCorrenteCliente1);

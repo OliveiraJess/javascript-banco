@@ -1,0 +1,23 @@
+{
+  "name": "javascript-banco",
+  "version": "1.0.0",
+  "description": "Operações bancárias com JavaScript. Criação de um sistema que permite o cadastro de clientes, contas-correntes e operações bancárias comuns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliveiraJess/javascript-banco.git"
+  },
+  "keywords": [
+    "Jessica"
+  ],
+  "author": "Jessica",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/OliveiraJess/javascript-banco/issues"
+  },
+  "homepage": "https://github.com/OliveiraJess/javascript-banco#readme"
+}
