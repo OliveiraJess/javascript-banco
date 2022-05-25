@@ -1,9 +1,24 @@
+import { Cliente } from "./Cliente.js";
+
 export class ContaCorrente {
     agencia;
-    cliente;
+    _cliente;
+
+    set cliente(novoValor) {
+        if (novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
+    }
+    get cliente() {
+        return this._cliente;
+    }
 
     // #saldo = 0 ainda não esta aprovado esse método para tornar privado #
     _saldo = 0
+
+    get saldo() {
+        return this._saldo;
+    }
 
     sacar(valor) {
         if (this._saldo >= valor) {
@@ -12,16 +27,16 @@ export class ContaCorrente {
             return valor;
         }
     }
-    depositar (valor) {
-       if (valor <= 0) {
-         return;
-       }
-       this._saldo += valor;
+    depositar(valor) {
+        if (valor <= 0) {
+            return;
+        }
+        this._saldo += valor;
     }
 
     transferir(valor, conta) {
-        
-        const valorSacado = this.sacar(valor)
-        conta.depositar(valorSacado)
+
+        const valorSacado = this.sacar(valor);
+        conta.depositar(valorSacado);
     }
 };

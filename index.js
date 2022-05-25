@@ -31,3 +31,5 @@ contaCorrenteCliente1.transferir(valor, contaCorrenteCliente2)
 // console.log(valorSacado);
 console.log(contaCorrenteCliente1);
 console.log(contaCorrenteCliente2);
+console.log(contaCorrenteCliente2.cliente);
+console.log(contaCorrenteCliente2.saldo);
