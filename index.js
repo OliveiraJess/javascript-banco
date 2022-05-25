@@ -18,14 +18,13 @@ contaCorrenteCliente1.depositar(500)
 // contaCorrenteCliente1.depositar(100);
 // const valorSacado = contaCorrenteCliente1.sacar(100);
 
-let valor = 200
+let valor = 300
 contaCorrenteCliente1.transferir(valor, contaCorrenteCliente2)
 
 
-//consoles
-// console.log(valorSacado);
+//consoles contas
 console.log(contaCorrenteCliente1);
 console.log(contaCorrenteCliente2);
-// console.log(contaCorrenteCliente2.cliente);
-// console.log(contaCorrenteCliente2.saldo);
-console.log(contaCorrenteCliente1.cliente);
+
+//console numero de contas
+console.log(ContaCorrente.numeroDeContas);
