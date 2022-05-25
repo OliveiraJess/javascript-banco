@@ -1,24 +1,35 @@
 import { Cliente } from "./Cliente.js";
 
+// #saldo = 0  -- ainda não esta aprovado esse método para tornar privado, utilizando #
+
+
 export class ContaCorrente {
+
     agencia;
     _cliente;
+    _saldo = 0
+
 
     set cliente(novoValor) {
         if (novoValor instanceof Cliente) {
             this._cliente = novoValor;
         }
     }
+
     get cliente() {
         return this._cliente;
     }
 
-    // #saldo = 0 ainda não esta aprovado esse método para tornar privado #
-    _saldo = 0
-
     get saldo() {
         return this._saldo;
     }
+
+
+constructor(cliente, agencia) {
+    this.cliente = cliente;
+    this.agencia = agencia;
+}
+
 
     sacar(valor) {
         if (this._saldo >= valor) {
@@ -27,6 +38,7 @@ export class ContaCorrente {
             return valor;
         }
     }
+
     depositar(valor) {
         if (valor <= 0) {
             return;
