@@ -1,4 +1,3 @@
-import { Cliente } from "./Cliente.js";
 import { Conta } from "./Conta.js";
 
 // #saldo = 0  -- ainda não esta aprovado esse método para tornar privado, utilizando #
