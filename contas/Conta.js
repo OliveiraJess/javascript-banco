@@ -11,7 +11,7 @@ export class Conta {
 
     }
 
-
+    //assessores get e set
     set cliente(novoValor) {
         if (novoValor instanceof Cliente) {
             this._cliente = novoValor;
