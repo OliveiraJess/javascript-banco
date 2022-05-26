@@ -7,8 +7,8 @@ import { ContaSalario } from "./contas/ContaSalario.js";
 import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 
 //clientes
-const cliente1 = new Cliente("Maria", 99988877766);
-const cliente2 = new Cliente("João", 99988877755);
+const cliente1 = new Cliente("Maria", 99988877766, "01010101");
+const cliente2 = new Cliente("João", 99988877755, "02020202");
 
 
 //contas correntes
@@ -29,12 +29,13 @@ const contaSalarioCliente2 = new ContaSalario(cliente2);
 const diretor = new Diretor("Pedro",  99933377766, 15000);
 const gerente = new Gerente("Ana",  99933355566, 12000);
 
+//cadastrar senha
 diretor.cadastrarSenha("123456")
 gerente.cadastrarSenha("0123456")
 
-// const estaLogado = SistemaAutenticacao.login(diretor, "123456");
-const estaLogado = SistemaAutenticacao.login(gerente, "0123456");
-
+const diretorEstaLogado = SistemaAutenticacao.login(diretor, "123456");
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente, "0123456");
+const cliente1EstaLogado = SistemaAutenticacao.login(cliente1, "01010101");
 
 
 
@@ -61,5 +62,6 @@ const estaLogado = SistemaAutenticacao.login(gerente, "0123456");
 // console.log(ContaCorrente.numeroDeContas);
 
 //esta logado?
-console.log(estaLogado)
-
+console.log(diretorEstaLogado)
+console.log(gerenteEstaLogado)
+console.log(cliente1EstaLogado)

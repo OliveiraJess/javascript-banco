@@ -1,6 +1,6 @@
 export class SistemaAutenticacao {
-    static login(funcionario, senha) {
-        return funcionario.senha == senha;
+    static login(autenticacao, senha) {
+        return autenticacao.autenticar(senha);
 
     }
 }
